@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3c.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+<h:head></h:head>
+<h:body>
+    <h:form id="calculadora_form">
+        <p:inputText value="#{calculadoraBean.entrada}" />
+        <br/>
+        <p:outputLabel value = "Moda: #{calculadoraBean.moda}" style="display:none"/>
+        <br/>
+        <p:outputLabel value = "Promedio: #{calculadoraBean.promediofinal}" style="font-weight:bold"/>
+        <br/>
+        <p:outputLabel value = "Varianza: #{calculadoraBean.varianza}" style="font-weight:bold"/>
+        <br/>
+        <p:outputLabel value = "Desviacion estandar: #{calculadoraBean.desvestandatarfinal}" style="font-weight:bold"/>
+        <br/>
+        <p:commandButton update="calculadora_form" value="Enviar" actionListener="#{calculadoraBean.calbean()}"/>
+        <p:commandButton update="calculadora_form" value="Reiniciar" actionListener="#{calculadoraBean.restart()}"/>
+        <br/>
+    </h:form>
+</h:body>
+</html>
