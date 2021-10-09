@@ -6,7 +6,7 @@ import java.util.Arrays;
 
 @ApplicationScoped
 @ManagedBean(name = "calculadoraBean")
-public class AplicationBean {
+public class AplicationBean{
 
     protected ArrayList<Double> datos = new ArrayList<>();
     protected String entrada;
